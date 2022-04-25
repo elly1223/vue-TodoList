@@ -6,14 +6,10 @@
   </head>
   <body>
     <div id="app">
-      <ul style="list-style: none">
-        <template v-for="item in items">
-          <li>
-            <img :src="item.image" />
-          </li>
-          <li>{{ item.title }}</li>
-        </template>
-      </ul>
+      <!-- <img :id="`thumbnail_${id}`" :src="image" /> -->
+
+      <!-- <div :style="style">테스트용 DIV</div> -->
+      <div :style="[style, fontStyle]">테스트용 DIV</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -21,28 +17,18 @@
         el: "#app",
         data() {
           return {
-            items: [
-              {
-                id: 1,
-                image: "https://picsum.photos/210/118/?images=1",
-                title: "컴퓨터",
-              },
-              {
-                id: 2,
-                image: "https://picsum.photos/210/118/?images=100",
-                title: "해변",
-              },
-              {
-                id: 3,
-                image: "https://picsum.photos/210/118/?images=160",
-                title: "휴대폰",
-              },
-              {
-                id: 4,
-                image: "https://picsum.photos/210/118/?images=200",
-                title: "황소",
-              },
-            ],
+            id: 1,
+            image: "https://picsum.photos/200/200/?image=353",
+            // style: "background: red",
+            style: {
+              background: "red",
+              //   "font-size": "10px",
+              //   fontFamily: "dotum",
+            },
+            fontStyle: {
+              fontSize: "10px",
+              fontFamily: "dotum",
+            },
           };
         },
       });
