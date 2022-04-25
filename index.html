@@ -9,7 +9,7 @@
       <!-- <img :id="`thumbnail_${id}`" :src="image" /> -->
 
       <!-- <div :style="style">테스트용 DIV</div> -->
-      <div :style="[style, fontStyle]">테스트용 DIV</div>
+      <div :class="dropdown">테스트용 DIV</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -28,6 +28,10 @@
             fontStyle: {
               fontSize: "10px",
               fontFamily: "dotum",
+            },
+            dropdown: {
+                // dropdown: true,
+              dropdown: false 
             },
           };
         },
